@@ -1,0 +1,56 @@
+﻿<Page
+    x:Class="ASM.Views.BlankPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ASM.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="150" />
+            </Grid.ColumnDefinitions>
+
+            <Button Name="ClockButton" 
+                    HorizontalAlignment="Left"
+                    Grid.Column="0">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="20">
+                    <SymbolIcon Symbol="Clock" Foreground="White"/>
+                    <TextBlock Text="Clock" 
+                               Foreground="White" />
+                </StackPanel>
+            </Button>
+
+            <Button Name="GalleryButton" 
+                    Grid.Column="1">
+                <StackPanel Orientation="Vertical" Margin="20">
+                    <SymbolIcon Symbol="StopSlideShow" Foreground="White"/>
+                    <TextBlock Text="View Gallery" Foreground="White" />
+                </StackPanel>
+            </Button>
+
+            <Button Name="HelpButton" 
+                    Grid.Column="2" >
+                <StackPanel Orientation="Vertical" Margin="20">
+                    <SymbolIcon Symbol="Help" Foreground="White"/>
+                    <TextBlock Text="Help" Foreground="White" />
+                </StackPanel>
+            </Button>
+
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <TextBlock Text="Demo AppBar" Margin="100,50,0,0"/>
+        </Grid>
+    </Grid>
+</Page>
